@@ -5,16 +5,20 @@ require_once __DIR__ . '/../config/bootstrap.php';
 use App\Controller\PessoaController, App\Controller\ContatoController;
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$base = '/magazord-teste/public'; // ajuste se a pasta local tiver outro nome
+
+$base = '/magazord-teste/public';
 $path = str_replace($base, '', $uri);
 $path = $path === '' ? '/' : $path;
+
+// Remove barra final, se tiver
+$path = rtrim($path, '/') ?: '/';
+
 $method = $_SERVER['REQUEST_METHOD'];
 
 $pessoaController = new PessoaController($entityManager);
 $contatoController = new ContatoController($entityManager);
 
 match (true) {
-    
     $path === '/' || $path === '/pessoas' => $pessoaController->index(),
     $path === '/pessoas/criar' && $method === 'GET' => $pessoaController->create(),
     $path === '/pessoas/salvar' && $method === 'POST' => $pessoaController->store(),
@@ -31,5 +35,5 @@ match (true) {
     preg_match('#^/contatos/excluir/(\d+)$#', $path, $m) => $contatoController->delete((int)$m[1]),
     preg_match('#^/contatos/(\d+)$#', $path, $m) => $contatoController->show((int)$m[1]),
 
-    default => (http_response_code(404) || true) && print 'Página não encontrada',
+    default => (http_response_code(404) || true) && print 'Página não encontrada: ' . htmlspecialchars($path),
 };
