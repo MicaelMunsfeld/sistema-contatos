@@ -8,6 +8,7 @@
     "require": {
         "doctrine/orm": "^3.7",
         "doctrine/dbal": "^4.5",
-        "symfony/cache": "^7.4"
+        "symfony/cache": "^7.4",
+        "lacus/cpf-val": "^1.0"
     }
 }

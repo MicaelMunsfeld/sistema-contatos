@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cadf4835056ab2ee10530e469f9fe73d",
+    "content-hash": "ab797ac265a731db475650fb62410912",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -755,6 +755,126 @@
                 }
             ],
             "time": "2026-04-26T12:12:52+00:00"
+        },
+        {
+            "name": "lacus/cpf-gen",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LacusSolutions/br-utils-php_cpf-gen.git",
+                "reference": "5b1b66889fe1f6ae7d986bd058a4bef68889dea2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LacusSolutions/br-utils-php_cpf-gen/zipball/5b1b66889fe1f6ae7d986bd058a4bef68889dea2",
+                "reference": "5b1b66889fe1f6ae7d986bd058a4bef68889dea2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5",
+                "spatie/phpunit-watcher": "~1.24"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/cpf-gen.php"
+                ],
+                "psr-4": {
+                    "Lacus\\CpfGen\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julio L. Muller",
+                    "email": "juliolmuller@outlook.com",
+                    "homepage": "https://juliolmuller.github.io"
+                }
+            ],
+            "description": "Utility function to generate valid CPF (Brazilian personal ID)",
+            "homepage": "https://cpf-utils.vercel.app/",
+            "keywords": [
+                "br",
+                "cpf",
+                "fake",
+                "faker",
+                "generate",
+                "generator",
+                "gerador",
+                "gerar",
+                "pt-BR"
+            ],
+            "support": {
+                "issues": "https://github.com/LacusSolutions/br-utils-php/issues",
+                "source": "https://github.com/LacusSolutions/br-utils-php"
+            },
+            "time": "2025-10-13T10:55:45+00:00"
+        },
+        {
+            "name": "lacus/cpf-val",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LacusSolutions/br-utils-php_cpf-val.git",
+                "reference": "92b9a2a22eeb2231d71deb9aec53e2b2d4740893"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LacusSolutions/br-utils-php_cpf-val/zipball/92b9a2a22eeb2231d71deb9aec53e2b2d4740893",
+                "reference": "92b9a2a22eeb2231d71deb9aec53e2b2d4740893",
+                "shasum": ""
+            },
+            "require": {
+                "lacus/cpf-gen": "~1.0.1",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5",
+                "spatie/phpunit-watcher": "~1.24"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/cpf-val.php"
+                ],
+                "psr-4": {
+                    "Lacus\\CpfVal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julio L. Muller",
+                    "email": "juliolmuller@outlook.com",
+                    "homepage": "https://juliolmuller.github.io"
+                }
+            ],
+            "description": "Utility function to validate CPF (Brazilian personal ID)",
+            "homepage": "https://cpf-utils.vercel.app/",
+            "keywords": [
+                "br",
+                "cpf",
+                "pt-BR",
+                "valid",
+                "validador",
+                "validar",
+                "validate",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/LacusSolutions/br-utils-php/issues",
+                "source": "https://github.com/LacusSolutions/br-utils-php"
+            },
+            "time": "2026-06-11T02:50:45+00:00"
         },
         {
             "name": "psr/cache",

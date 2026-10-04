@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Pessoa, Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Pessoa, Doctrine\ORM\EntityManagerInterface, Lacus\CpfVal\CpfValidator;
 
 /**
  * Controlador gerenciador das pessoas.
@@ -49,6 +49,10 @@ class PessoaController {
     public function store(): void {
         $pessoa = new Pessoa();
         $pessoa->setNome(trim($_POST['nome'] ?? ''));
+        if(!(new CpfValidator())->isValid($_POST['cpf'] ?? '')) {
+            echo 'CPF inválido';
+            return;
+        }
         $pessoa->setCpf(trim($_POST['cpf'] ?? ''));
         $this->em->persist($pessoa);
         $this->em->flush();
@@ -99,6 +103,10 @@ class PessoaController {
             return;
         }
         $pessoa->setNome(trim($_POST['nome'] ?? ''));
+        if(!(new CpfValidator())->isValid($_POST['cpf'] ?? '')) {
+            echo 'CPF inválido';
+            return;
+        }
         $pessoa->setCpf(trim($_POST['cpf'] ?? ''));
         $this->em->flush();
 
