@@ -43,7 +43,7 @@ Extensões PHP utilizadas: `pdo_mysql`, `mbstring`, `json`.
 
 ### 1. Baixar o código
 
-**Opção A — Clonar com Git:**
+**Clonar com Git:**
 
 ```bash
 git clone https://github.com/MicaelMunsfeld/sistema-contatos.git
