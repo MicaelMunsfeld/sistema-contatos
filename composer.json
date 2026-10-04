@@ -10,5 +10,8 @@
         "doctrine/dbal": "^4.5",
         "symfony/cache": "^7.4",
         "lacus/cpf-val": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
     }
 }
