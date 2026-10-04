@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM, Doctrine\Common\Collections\Collection, Doctrin
 
 #[ORM\Entity]
 #[ORM\Table(name: 'tbpessoa')]
+/**
+ * Entidade representando uma pessoa.
+ */
 class Pessoa {
 
     #[ORM\Id]

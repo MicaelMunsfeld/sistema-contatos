@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'tbcontato')]
+/**
+ * Entidade representando um contato.
+ */
 class Contato {
     
     #[ORM\Id]
