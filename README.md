@@ -234,7 +234,7 @@ OK (16 tests, 40 assertions)
 - Sem Docker e sem framework de backend (conforme escopo do teste)
 - Persistência feita somente via Doctrine ORM
 - Validação de CPF com a biblioteca `lacus/cpf-val` => `composer require lacus/cpf-val`
-- Frontend simples (HTML/CSS), pois não é o foco da avaliação
+- Frontend simples (HTML/CSS), pois não é o foco
 - Controle de versão no GitHub
 
 ---
